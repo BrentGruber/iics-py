@@ -312,3 +312,9 @@ class AsyncIICSClient:
         response = await self._get("/connection", api_version=ApiVersion.V2)
         connections = response.get("connections", [])
         return parse_model_list(Connection, connections)
+
+    async def get_connection_by_id(self, connection_id: str) -> Connection:
+        response = await self._get(
+            f"/connection/{connection_id}", api_version=ApiVersion.V2
+        )
+        return parse_model(Connection, response)
