@@ -1,4 +1,4 @@
-# IICS REST API Client
+# Asynchronous IICS REST API Client
 
 A typed Python client for the **Informatica Intelligent Cloud Services (IICS)** REST API, with both synchronous (`requests`) and asynchronous (`httpx`) implementations sharing the same Pydantic v2 models and interface.
 
